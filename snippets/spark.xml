@@ -16,7 +16,7 @@
            revision="refs/heads/elle" />
 
   <remote  name="devices"
-           fetch="https://github.com/Spark-Devices"
+           fetch="ssh://git@github.com/Spark-Devices"
            revision="refs/heads/spark" />
 
   <remote  name="spark-gitlab"
@@ -121,5 +121,5 @@
   <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="fluid-temp" />
   <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" groups="qcom,pdk-qcom" remote="fluid-temp" />
   <project path="vendor/gms" name="android_vendor_gms" remote="spark-gitlab" clone-depth="1" />
-
+  <project path="vendor/ci" name="vendor_ci" remote="devices"  />
 </manifest>
