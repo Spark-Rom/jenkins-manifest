@@ -2,13 +2,13 @@
 <manifest>
 
   <remote  name="github"
-           fetch="https://github.com" />
+           fetch="ssh://git@github.com" />
   
   <remote  name="gitlab"
            fetch="https://gitlab.com" />
   
   <remote name="spark"
-          fetch="https://github.com/Spark-Rom"
+          fetch="ssh://git@github.com/Spark-Rom"
           revision="refs/heads/spark"/>
 
   <remote  name="evo"
@@ -26,6 +26,10 @@
   <remote  name="fluid-temp"
            fetch="https://github.com/Project-Fluid-Testing/"
            revision="fluid-12" />
+ 
+ <remote name="proton"
+          fetch="https://github.com/kdrag0n"
+          revision="master" />
 
   <!-- Rootdir -->
   <project path="bionic" name="bionic" groups="pdk" remote="spark" />
@@ -124,4 +128,9 @@
   <project path="vendor/qcom/opensource/fm-commonsys" name="vendor_qcom_opensource_fm-commonsys" groups="qcom,qcom_fm" remote="spark" />
   <project path="vendor/gms" name="android_vendor_gms" remote="spark-gitlab" clone-depth="1" />
   <project path="vendor/ci" name="vendor_ci" remote="devices"  />
+
+  <!--Clang-->
+
+  <project path="prebuilts/clang/host/linux-x86/clang-proton" name="proton-clang" remote="proton"  clone-depth="1" />
+
 </manifest>

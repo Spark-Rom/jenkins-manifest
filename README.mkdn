@@ -21,7 +21,7 @@ To initialize your local repository, run this command:
 ------------------------------------------------------
 
 ```bash
-   repo init -u https://github.com/Spark-Rom/manifest -b spark
+   repo init -u git@github.com:Spark-Rom/jenkins_manifest.git -b spark
 ```
 
 Afterwards, sync the source by running this command:
@@ -35,15 +35,12 @@ repo sync --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$
 Building Spark
 ---------------
 
-In case you are building Mac OS X, you are required to install coreutils from MacPorts before you continue.
-In order to build, use this command:
-```bash
-   . build/env*
-   lunch spark_<devicecodename>-userdebug
-   mka bacon -j$(nproc --all)
-```
+We use roomservice to build the trees , with the manual changes needed from vendor/ci if any.
+Use jenkins.spark-os.live to see the queue.
+CI Channel which announces builds is  https://t.me/sparkosci
+
 
 After building:
 ---------------
 
-Be sure to check our [**documents repo**](https://github.com/Spark-Rom/Stuff) for any queries.
+Your device is updated and json pushed to the website , it is also pushed to announcments channel
