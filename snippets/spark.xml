@@ -2,13 +2,13 @@
 <manifest>
 
   <remote  name="github"
-           fetch="https://github.com" />
+           fetch="https://git@github.com" />
   
   <remote  name="gitlab"
            fetch="https://gitlab.com" />
   
   <remote name="spark"
-          fetch="https://github.com/Spark-Rom"
+          fetch="https://git@github.com/Spark-Rom"
           revision="refs/heads/spark"/>
 
   <remote  name="evo"
@@ -16,7 +16,7 @@
            revision="refs/heads/snow" />
 
   <remote  name="devices"
-           fetch="https://github.com/Spark-Devices"
+           fetch="ssh://git@github.com/Spark-Devices"
            revision="refs/heads/spark" />
 
   <remote  name="spark-gitlab"
@@ -30,6 +30,10 @@
   <remote  name="arrow"
            fetch="https://github.com/ArrowOS"
            revision="refs/heads/arrow-12.1" />
+
+ <remote name="proton"
+          fetch="https://github.com/kdrag0n"
+          revision="master" />
 
   <!-- Remove unused hardware repos -->
   <remove-project name="device/amlogic/yukawa" />
@@ -312,4 +316,8 @@
   <project path="vendor/qcom/opensource/healthd-ext" name="android_vendor_qcom_opensource_healthd-ext" remote="arrow"/>
   <project path="vendor/qcom/opensource/libfmjni" name="android_vendor_qcom_opensource_libfmjni" remote="arrow" />
   <project path="vendor/qcom/opensource/usb" name="android_vendor_qcom_opensource_usb" remote="arrow" />
+
+  <!--Clang-->
+  <project path="prebuilts/clang/host/linux-x86/clang-proton" name="proton-clang" remote="proton"  clone-depth="1" />
+
 </manifest>
